@@ -1,6 +1,6 @@
 import AppKit
 let S: CGFloat = 1024
-let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: 1024, pixelsHigh: 1024, bitsPerSample: 8, samplesPerPixel: 3, hasAlpha: false, isPlanar: false, colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0)!
+let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: 1024, pixelsHigh: 1024, bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0)!
 NSGraphicsContext.saveGraphicsState()
 NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: rep)
 func c(_ h: UInt32, _ a: CGFloat = 1) -> NSColor { NSColor(red: CGFloat((h>>16)&255)/255, green: CGFloat((h>>8)&255)/255, blue: CGFloat(h&255)/255, alpha: a) }
@@ -17,12 +17,18 @@ for r in 0..<2 { for col in 0..<2 {
     if sun {
         NSGradient(colors: [c(0xFFE14D), c(0xFF9F1A)])!.draw(in: NSBezierPath(ovalIn: m), relativeCenterPosition: .zero)
     } else {
-        let p = NSBezierPath(ovalIn: m)
-        let cut = NSBezierPath(ovalIn: m.offsetBy(dx: m.width*0.28, dy: m.height*0.10).insetBy(dx: m.width*0.04, dy: m.height*0.04))
-        p.append(cut); p.windingRule = .evenOdd
-        c(0x6B9EFF).setFill(); p.fill()
+        let cut = CGRect(x: m.minX + m.width*0.30, y: m.minY + m.height*0.10, width: m.width*0.92, height: m.height*0.92)
+        let crescent = CGPath(ellipseIn: m, transform: nil).subtracting(CGPath(ellipseIn: cut, transform: nil))
+        let g = NSGraphicsContext.current!.cgContext
+        g.addPath(crescent); g.setFillColor(c(0x6B9EFF).cgColor); g.fillPath()
     }
     NSGraphicsContext.restoreGraphicsState()
 }}
 NSGraphicsContext.restoreGraphicsState()
-try! rep.representation(using: .png, properties: [:])!.write(to: URL(fileURLWithPath: CommandLine.arguments[1]))
+// Flatten to an opaque PNG (App Store icons must not have alpha)
+let cg = rep.cgImage!
+let ctx = CGContext(data: nil, width: 1024, height: 1024, bitsPerComponent: 8, bytesPerRow: 0, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)!
+ctx.draw(cg, in: CGRect(x: 0, y: 0, width: 1024, height: 1024))
+let dest = CGImageDestinationCreateWithURL(URL(fileURLWithPath: CommandLine.arguments[1]) as CFURL, "public.png" as CFString, 1, nil)!
+CGImageDestinationAddImage(dest, ctx.makeImage()!, nil)
+CGImageDestinationFinalize(dest)
