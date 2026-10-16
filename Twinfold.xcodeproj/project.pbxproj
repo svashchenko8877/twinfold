@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+		22958DF25AA10EFFC4906905 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = Twinfold.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D66ADE64E49AA35420BAEC8B = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		632A6A5DD9FCA842CAE3E717 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Twinfold;
+			sourceTree = "<group>";
+		};
+		BBC7DFA7A17A6DA8403216C6 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		113236722DEE1DC96F378B9D = {
+			isa = PBXGroup;
+			children = (
+				22958DF25AA10EFFC4906905,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71DC27D9F8E3B109C877BFC4 = {
+			isa = PBXGroup;
+			children = (
+				632A6A5DD9FCA842CAE3E717,
+				89B104369EBC5E85E7E43C6B,
+				113236722DEE1DC96F378B9D,
+			);
+			sourceTree = "<group>";
+		};
+		89B104369EBC5E85E7E43C6B = {
+			isa = PBXGroup;
+			children = (
+				D66ADE64E49AA35420BAEC8B,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F9CAC97F4EE893C234521463 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2EF0BFE4C820F767E4303FC;
+			buildPhases = (
+				D3C95E37FB51BEEBFB3E63BF,
+				BBC7DFA7A17A6DA8403216C6,
+				34274CC4D8480DF68A75E3AA,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				632A6A5DD9FCA842CAE3E717,
+			);
+			name = Twinfold;
+			packageProductDependencies = (
+			);
+			productName = Twinfold;
+			productReference = 22958DF25AA10EFFC4906905;
+			productType = "com.apple.product-type.application";
+		};
+		46F86FAA6BBF9AC94A7E4595 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					F9CAC97F4EE893C234521463 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = 32D42B6A09FA42C6EFFC8E0F;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71DC27D9F8E3B109C877BFC4;
+			productRefGroup = 113236722DEE1DC96F378B9D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9CAC97F4EE893C234521463,
+			);
+		};
+		34274CC4D8480DF68A75E3AA = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C95E37FB51BEEBFB3E63BF = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A7A0B5D77E04AA4D40B6119 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				SWIFT_VERSION = 5.0;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEVELOPMENT_TEAM = 8ZQ6AC3JS9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				INFOPLIST_KEY_CFBundleDisplayName = Twinfold;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				INFOPLIST_FILE = Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ENABLE_PREVIEWS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vashchenko.twinfold;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		7AB29ABF224BB8D8DFFBE478 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				SWIFT_VERSION = 5.0;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEVELOPMENT_TEAM = 8ZQ6AC3JS9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				INFOPLIST_KEY_CFBundleDisplayName = Twinfold;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				INFOPLIST_FILE = Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ENABLE_PREVIEWS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vashchenko.twinfold;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		84B24849E6E8EEE60DD88DAB = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				SWIFT_VERSION = 5.0;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEVELOPMENT_TEAM = 8ZQ6AC3JS9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2537EB642F66908342E0594 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				SWIFT_VERSION = 5.0;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEVELOPMENT_TEAM = 8ZQ6AC3JS9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		32D42B6A09FA42C6EFFC8E0F = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2537EB642F66908342E0594,
+				84B24849E6E8EEE60DD88DAB,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2EF0BFE4C820F767E4303FC = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AB29ABF224BB8D8DFFBE478,
+				0A7A0B5D77E04AA4D40B6119,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+	};
+	rootObject = 46F86FAA6BBF9AC94A7E4595;
+}

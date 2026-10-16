@@ -1,0 +1,20 @@
+{
+  "identifier" : "TF000001",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "6750000001",
+      "localizations" : [
+        { "description" : "Unlimited puzzles, 8x8 and 10x10 grids, Hard difficulty and unlimited hints.", "displayName" : "Twinfold Pro", "locale" : "en_US" }
+      ],
+      "productID" : "com.vashchenko.twinfold.pro",
+      "referenceName" : "Pro",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {},
+  "subscriptionGroups" : [],
+  "version" : { "major" : 3, "minor" : 0 }
+}
